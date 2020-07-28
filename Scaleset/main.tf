@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "main" {
   name     = "${var.prefix}-resources"
   location = var.location
+  tags = {
+    Name = var.environment
+  }
 }
 
 resource "azurerm_virtual_network" "main" {

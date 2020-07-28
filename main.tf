@@ -10,10 +10,7 @@ module "londonscaleset" {
   inmins   = "0"
   out      = "17"
   outmins  = "0"
-
-  tags = {
-    Environment = "Production"
-  }
+  environment = "Production"
 }
 
 module "mumbaiscaleset" {
@@ -24,10 +21,7 @@ module "mumbaiscaleset" {
   inmins   = "30"
   out      = "10"
   outmins  = "30"
-
-  tags = {
-    Environment = "Development"
-  }
+  environment = "Development"
 }
 
 module "parisscaleset" {
@@ -38,8 +32,5 @@ module "parisscaleset" {
   inmins   = "0"
   out      = "15"
   outmins  = "0"
-
-  tags = {
-    Environment = "Staging"
-  }
+  environment = "Staging"
 }
