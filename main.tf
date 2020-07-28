@@ -13,7 +13,7 @@ module "mumbaiscaleset" {
   location = "westindia"
 }
 
-module "londonscaleset" {
+module "parisscaleset" {
   source   = "./Paris"
   location = "francecentral"
 }
