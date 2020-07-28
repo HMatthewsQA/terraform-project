@@ -11,9 +11,11 @@ module "londonscaleset" {
 module "mumbaiscaleset" {
   source   = "./Mumbai"
   location = "westindia"
+  prefix   = "mumbai"
 }
 
 module "parisscaleset" {
   source   = "./Paris"
   location = "francecentral"
+  prefix   = "paris"
 }
