@@ -123,15 +123,15 @@ resource "azurerm_monitor_autoscale_setting" "main" {
   }
 
   profile {
-	name = "Downscale" 
+	  name = "Downscale" 
 
-	capacity {
+	  capacity {
       default = 0
       minimum = 0
       maximum = 0
     }
 
-	rule {
+	  rule {
       metric_trigger {
         metric_name        = "Percentage CPU"
         metric_resource_id = azurerm_linux_virtual_machine_scale_set.main.id
