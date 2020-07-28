@@ -14,7 +14,7 @@ resource "azurerm_subnet" "internal" {
   name                 = "internal"
   resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.main.name
-  address_prefix       = "10.0.2.0/24"
+  address_prefixes       = ["10.0.2.0/24"]
 }
 
 resource "azurerm_linux_virtual_machine_scale_set" "main" {
@@ -117,8 +117,8 @@ resource "azurerm_monitor_autoscale_setting" "main" {
       #frequency = "Week"
       timezone  = "Greenwich Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-      hours     = [10]
-      minutes   = [0]
+      hours     = [var.in]
+      minutes   = [var.inmins]
     }
   }
 
@@ -155,8 +155,8 @@ resource "azurerm_monitor_autoscale_setting" "main" {
       #frequency = "Week"
       timezone  = "Greenwich Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-      hours     = [15]
-      minutes   = [0]
+      hours     = [var.out]
+      minutes   = [var.outmins]
     }
   }
 }
