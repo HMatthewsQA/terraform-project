@@ -113,7 +113,7 @@ resource "azurerm_monitor_autoscale_setting" "main" {
       }
     }
 
-	recurrence {
+	  recurrence {
       frequency = "Week"
       timezone  = "Greenwich Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -151,7 +151,7 @@ resource "azurerm_monitor_autoscale_setting" "main" {
       }
     }
 
-	recurrence {
+	  recurrence {
       frequency = "Week"
       timezone  = "Greenwich Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
