@@ -10,7 +10,7 @@ module "londonscaleset" {
 
 module "mumbaiscaleset" {
   source   = "./Mumbai"
-  location = "westus"
+  location = "eastasia"
   prefix   = "mumbai"
 }
 
