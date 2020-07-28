@@ -118,7 +118,7 @@ resource "azurerm_monitor_autoscale_setting" "main" {
 
 	  recurrence {
       #frequency = "Week"
-      timezone  = "Greenwich Standard Time"
+      timezone  = "GMT Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
       hours     = [var.in]
       minutes   = [var.inmins]
@@ -156,7 +156,7 @@ resource "azurerm_monitor_autoscale_setting" "main" {
 
 	  recurrence {
       #frequency = "Week"
-      timezone  = "Greenwich Standard Time"
+      timezone  = "GMT Standard Time"
       days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
       hours     = [var.out]
       minutes   = [var.outmins]
